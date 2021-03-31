@@ -50,14 +50,18 @@
 
   <!-- Page Content -->
   <div class="container">
+{%block content%}
 
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
-      <h1 class="display-3">A Warm Welcome!</h1>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
-      <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
+      <h1 class="display-3">おじさんラインチェッカー</h1>
+      <p class="lead">ここに入力してね</p>
+          <form action="answer/" method="get">
+        <label>文章:<input type="text" size="20" name="your_name"></label>
+        <input type="submit" value="送信">
+    </form>
     </header>
-
+    {%endblock%}
     <!-- Page Features -->
     <div class="row text-center">
 
