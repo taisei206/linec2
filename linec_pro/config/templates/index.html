@@ -28,10 +28,12 @@
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
       <img src="static/img/img.png">
-      <h1 class="display-3">おじさんラインチェッカー</h1>
+      <h1 class="display-4">おじさんラインチェッカー</h1>
       <p class="lead">コピペしてここに入力してね</p>
+      <p class="lead">スタンプのところがかっこの中に文字になっていても大丈夫です。</p>
+
           <form action="answer/" method="get">
-            <textarea cols="30" rows="20" name="bunsyou"></textarea>
+            <textarea cols="30" rows="10" name="bunsyou"></textarea>
         <input type="submit" value="チェックする">
     </form>
     </header>
@@ -41,17 +43,25 @@
 
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
           <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+            <h4 class="card-title">注意点</h4>
+            <p class="card-text">まるかっこ（）が顔文字に使われていると判定が正しくできないことがあります。</p>
+            <p class="card-text">文章が長いほどおじさんレベルの信頼度が上がります。</p>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h4 class="card-title">作った人</h4>
+            <p class="card-text">トムソンガジェルと申します。しがない人生を送っております</p>
+            <p class="card-text">ブログやってるのでよろしく～</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
+            <a href="https://tomsongazel.com/" class="btn btn-primary">ぶろぐ</a>
           </div>
         </div>
       </div>
-
     </div>
     <!-- /.row -->
 
@@ -61,7 +71,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+      <p class="m-0 text-center text-white">Copyright &copy; トムソンガジェル</p>
     </div>
     <!-- /.container -->
   </footer>
