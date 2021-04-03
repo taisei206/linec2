@@ -31,15 +31,15 @@ def AnswerView(request):
 
     wariai = (count1+count2)/len(sinbun)
 
-    if wariai > 0.15:
+    if wariai > 0.25:
         return render(request, 'answer.html')
-    elif wariai > 0.125:
+    elif wariai > 0.10:
         return render(request, 'answer1.html')
-    elif wariai > 0.1:
-        return render(request, 'answer2.html')
     elif wariai > 0.08:
-        return render(request, 'answer3.html')
+        return render(request, 'answer2.html')
     elif wariai > 0.06:
+        return render(request, 'answer3.html')
+    elif wariai > 0.04:
         return render(request, 'answer4.html')
     else:
         return render(request, 'answer5.html')
