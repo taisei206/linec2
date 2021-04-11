@@ -20,8 +20,23 @@
 </head>
 
 <body>
-
-
+{%if messages%}
+<div class="container">
+  <div class="row">
+    <div class="w-100">
+      <ul class="messages" style="list-style:none;">
+        {%for message in messages%}
+        <li {% if message.tags%} class=" {{message.tags}}" {%endif%}>
+          {{message}}
+        </li>
+        {%endfor%}
+      </ul>
+    </div>
+  </div>
+</div>
+{%endif%}
+{%block inquiry%}
+{%endblock%}
   <!-- Page Content -->
   <div class="container">
 {%block content%}
@@ -33,7 +48,7 @@
       <p class="lead">おじさんからの文章や自分が送ろうとしている文章をコピペしてここに入力してね</p>
       <p class="lead">スタンプのところがかっこの中に文字になっていても大丈夫です。</p>
 
-          <form action="answer/" method="get">
+          <form action="{%url 'config:answer'%}" method="get">
             <textarea cols="30" rows="10" name="bunsyou"></textarea>
         <input type="submit"　 value="チェックする">
     </form>
@@ -49,9 +64,10 @@
             <p class="card-text">まるかっこ（）が顔文字に使われていると判定が正しくできないことがあります。</p>
             <p class="card-text">文章が長いほどおじさんレベルの信頼度が上がります。</p>
             <p class="card-text">文章がサーバーに保存されることはありませんので安心してお使いください</p>
-        </div>
+          </div>
+       </div>
       </div>
-      </div>
+
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
           <div class="card-body">
@@ -60,6 +76,7 @@
             <p class="card-text">相手に送る前に自分の文章がおじさんラインになってないか不安になったとき.</p>
         </div>
       </div>
+
       </div>
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
@@ -70,6 +87,18 @@
           </div>
           <div class="card-footer">
             <a href="https://tomsongazel.com/" class="btn btn-primary">ぶろぐ</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h4 class="card-title">お問い合わせ</h4>
+              <p class="card-text">疑問点や問題などありましたらこちらへ送ってください</p>
+          </div>
+          <div class="card-footer">
+            <a href="{%url 'config:inquiry'%}" class="btn btn-primary">問い合わせフォーム</a>
           </div>
         </div>
       </div>
