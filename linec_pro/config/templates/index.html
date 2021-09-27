@@ -50,7 +50,7 @@
 
           <form action="{%url 'config:answer'%}" method="get">
             <textarea cols="30" rows="10" name="bunsyou"></textarea>
-        <input type="submit"　 value="チェックする">
+        <input type="submit" value="チェックする">
     </form>
     </header>
     {%endblock%}
@@ -74,40 +74,15 @@
             <h4 class="card-title">いつ使うの？</h4>
             <p class="card-text">送られてきた文章がおじさんラインっぽいって思ったとき.</p>
             <p class="card-text">相手に送る前に自分の文章がおじさんラインになってないか不安になったとき.</p>
-        </div>
-      </div>
-
-      </div>
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h4 class="card-title">作った人</h4>
-            <p class="card-text">トムソンガジェルと申します。しがない人生を送っております</p>
-            <p class="card-text">ブログやってるのでよろしく～</p>
-          </div>
-          <div class="card-footer">
-            <a href="https://tomsongazel.com/" class="btn btn-primary">ぶろぐ</a>
           </div>
         </div>
-      </div>
-
-    <!-- /.row -->
-
-  </div>
   <!-- /.container -->
 
   <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; トムソンガジェル</p>
-    </div>
-    <!-- /.container -->
-  </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+<script src="{%static 'vendor/jquery/jquery.min.js'%}"></script>
+  <script src="{%static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
 </body>
 
 </html>
